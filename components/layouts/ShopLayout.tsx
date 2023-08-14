@@ -2,7 +2,7 @@ import Head from "next/head";
 import { FC } from "react";
 
 interface Props {
-  children: any;
+  children?: any;
   title: string;
   pageDescription: string;
   imageFullUrl?: string;
