@@ -6,7 +6,9 @@ import {
   CardMedia,
   Grid,
   Typography,
+  CircularProgress,
 } from "@mui/material";
+import Image from "next/image";
 import React, { FC, useMemo, useState } from "react";
 
 interface Props {
@@ -31,7 +33,13 @@ export const ProductCard: FC<Props> = ({ product }) => {
     >
       <Card>
         <CardActionArea>
-          <CardMedia component="img" image={productImage} alt={product.title} />
+          <CardMedia
+            className="fadeIn"
+            component="img"
+            image={productImage}
+            alt={product.title}
+            onLoad={() => <CircularProgress />}
+          />
         </CardActionArea>
       </Card>
       <Box className="fadeIn" sx={{ mt: 1 }}>
