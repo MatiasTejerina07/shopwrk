@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { FC } from "react";
+import { Navbar } from "../ui";
 
 interface Props {
   children?: any;
@@ -23,7 +24,9 @@ export const ShopLayout: FC<Props> = ({
         {imageFullUrl && <meta name="og:image" content={imageFullUrl} />}
       </Head>
 
-      <nav>{/* NAVBAR */}</nav>
+      <nav style={{ margin: "100px" }}>
+        <Navbar />
+      </nav>
 
       <main
         style={{
